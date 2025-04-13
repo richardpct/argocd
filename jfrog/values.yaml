@@ -16,7 +16,7 @@ jfrog-platform:
     enabled: true
     artifactory:
       persistence:
-        size: 70Gi
+        size: 65Gi
       # license:
       #   secret:
       #   dataKey:
@@ -45,7 +45,7 @@ jfrog:
     enabled: true
     artifactory:
       persistence:
-        size: 70Gi
+        size: 65Gi
       # license:
       #   secret:
       #   dataKey:
