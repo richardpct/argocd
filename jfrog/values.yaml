@@ -1,16 +1,27 @@
-global:
-  joinKey: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-  masterKey: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+databaseUpgradeReady: true
 
+global:
+  imagePullSecrets:
+    - myRegistryKeySecretName
 postgresql:
   enabled: true
-  persistence:
-    size: 5Gi
+  image:
+    tag: 16.6.0-debian-12-r2
+  primary:
+    persistence:
+      size: 50Gi
 
 artifactory:
   enabled: true
   artifactory:
-#    unifiedSecretInstallation: true
-#    unifiedSecretPrependReleaseName: true
     persistence:
-      size: 2Gi
+      size: 65Gi
+    # license:
+    #   secret:
+    #   dataKey:
+
+xray:
+  enabled: true
+  common:
+    persistence:
+      size: 50Gi
