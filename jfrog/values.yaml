@@ -14,7 +14,6 @@ postgresql:
 artifactory:
   enabled: true
   artifactory:
-    unifiedSecretInstallation: true
     persistence:
       size: 65Gi
     # license:
