@@ -1,0 +1,27 @@
+databaseUpgradeReady: true
+
+global:
+  imagePullSecrets:
+    - myRegistryKeySecretName
+postgresql:
+  enabled: true
+  image:
+    tag: 16.6.0-debian-12-r2
+  primary:
+    persistence:
+      size: 50Gi
+
+artifactory:
+  enabled: true
+  artifactory:
+    persistence:
+      size: 65Gi
+    # license:
+    #   secret:
+    #   dataKey:
+
+xray:
+  enabled: true
+  common:
+    persistence:
+      size: 50Gi
