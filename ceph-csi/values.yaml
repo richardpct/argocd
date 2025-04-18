@@ -1,5 +1,5 @@
 ---
-ceph-csi:
+ceph-csi-cephfs:
   # Configuration for the CSI to connect to the cluster
   # Ref: https://github.com/ceph/ceph-csi/blob/devel/examples/README.md
   # Example:
